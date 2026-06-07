@@ -37,9 +37,40 @@ jobs:
 
       - run: bun run build
 
+  docs:
+    name: Docs
+    needs: ci
+    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v6
+
+      - name: Checkout Starflow
+        uses: actions/checkout@v6
+        with:
+          repository: toadfans/starflow
+          ref: main
+          token: ${{ secrets.STARFLOW_TOKEN }}
+          path: .starflow-action
+
+      - name: Build docs
+        uses: ./.starflow-action
+        with:
+          output: dist/docs
+          base: /name-guard/
+
+      - name: Upload docs artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: docs-${{ github.sha }}
+          path: dist/docs
+
   release:
     name: Release
-    needs: ci
+    needs: docs
     if: github.event_name == 'push' && github.ref_name == 'main'
     runs-on: ubuntu-latest
     permissions:
