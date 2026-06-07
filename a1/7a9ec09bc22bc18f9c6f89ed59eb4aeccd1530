@@ -1,0 +1,32 @@
+scripts/version-bump.test.mjs
+  s_2dc62f5e245f8e::t_f18997cae1a2f4 13
+manifest.json
+  s_2dc62f5e245f8e::t_f18997cae1a2f4 2-3,6
+src/main.ts
+  s_2dc62f5e245f8e::t_5452738cab51bf 13,15
+  s_2dc62f5e245f8e::t_f18997cae1a2f4 4,6-7,27,35,49,68,98,107
+src/settings.ts
+  s_2dc62f5e245f8e::t_f18997cae1a2f4 2,4,10,16-17,19,24
+package.json
+  s_2dc62f5e245f8e::t_f18997cae1a2f4 2,4
+src/release-notes-modal.ts
+  s_2dc62f5e245f8e::t_f18997cae1a2f4 2,14,21,59
+README.md
+  s_2dc62f5e245f8e::t_f18997cae1a2f4 1,3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.3",
+  "base_commit_sha": "a17a9ec09bc22bc18f9c6f89ed59eb4aeccd1530",
+  "prompts": {},
+  "sessions": {
+    "s_2dc62f5e245f8e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ea10b-1de2-7352-b03b-9a17c487ff8c",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Yuhang Shi <toadfanszz@gmail.com>"
+    }
+  }
+}
