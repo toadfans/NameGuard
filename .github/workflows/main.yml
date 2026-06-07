@@ -62,6 +62,7 @@ jobs:
         with:
           output: dist/docs
           base: /name-guard/
+          publish: true
 
       - name: Upload docs artifact
         uses: actions/upload-artifact@v7
