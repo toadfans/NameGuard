@@ -1,0 +1,16 @@
+CHANGELOG.md
+  h_6b23b0021492af 3
+package.json
+  h_6b23b0021492af 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.3",
+  "base_commit_sha": "884193b5cb97b32164fc7ab6dea1d3c0c369fa46",
+  "prompts": {},
+  "humans": {
+    "h_6b23b0021492af": {
+      "author": "Yuhang Shi <toadfanszz@gmail.com>"
+    }
+  }
+}
