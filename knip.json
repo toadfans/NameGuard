@@ -1,5 +1,6 @@
 {
 	"$schema": "https://unpkg.com/knip@latest/schema.json",
 	"entry": ["src/main.ts", "scripts/**/*.mjs"],
+	"ignoreBinaries": ["obsidian"],
 	"project": ["src/**/*.ts", "scripts/**/*.mjs"]
 }
