@@ -1,3 +1,3 @@
-# Obplugin
+# NameGuard
 
-[![Main](https://github.com/toadfans-obsidian/obplugin/actions/workflows/main.yml/badge.svg)](https://github.com/toadfans-obsidian/obplugin/actions/workflows/main.yml)
+[![Main](https://github.com/toadfans-obsidian/name-guard/actions/workflows/main.yml/badge.svg)](https://github.com/toadfans-obsidian/name-guard/actions/workflows/main.yml)

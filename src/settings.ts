@@ -1,27 +1,27 @@
 import { PluginSettingTab, Setting, type App, type SettingDefinitionItem } from 'obsidian';
-import ObpluginPlugin from './main';
+import NameGuardPlugin from './main';
 
-export interface ObpluginPluginSettings {
+export interface NameGuardPluginSettings {
 	mySetting: string;
 	previousRelease: string;
 	showReleaseNotes: boolean;
 }
 
-export const DEFAULT_SETTINGS: ObpluginPluginSettings = {
+export const DEFAULT_SETTINGS: NameGuardPluginSettings = {
 	mySetting: 'default',
 	previousRelease: '',
 	showReleaseNotes: true,
 };
 
-export class ObpluginSettingTab extends PluginSettingTab {
-	plugin: ObpluginPlugin;
+export class NameGuardSettingTab extends PluginSettingTab {
+	plugin: NameGuardPlugin;
 
-	constructor(app: App, plugin: ObpluginPlugin) {
+	constructor(app: App, plugin: NameGuardPlugin) {
 		super(app, plugin);
 		this.plugin = plugin;
 	}
 
-	getSettingDefinitions(): SettingDefinitionItem<keyof ObpluginPluginSettings>[] {
+	getSettingDefinitions(): SettingDefinitionItem<keyof NameGuardPluginSettings>[] {
 		return [
 			{
 				name: 'Secret demo',

@@ -1,5 +1,5 @@
 import { App, Component, MarkdownRenderer, Modal } from 'obsidian';
-import type ObpluginPlugin from './main';
+import type NameGuardPlugin from './main';
 import { formatChangelogEntries, getChangelogEntries, selectChangelogVersions } from './changelog';
 
 const MAX_ENTRIES = 10;
@@ -11,14 +11,14 @@ export interface ReleaseNotesOptions {
 }
 
 export class ReleaseNotesModal extends Modal {
-	private plugin: ObpluginPlugin;
+	private plugin: NameGuardPlugin;
 	private options: ReleaseNotesOptions;
 	private version: string;
 	private renderHost: Component;
 
 	constructor(
 		app: App,
-		plugin: ObpluginPlugin,
+		plugin: NameGuardPlugin,
 		version: string,
 		options: ReleaseNotesOptions = {},
 	) {
@@ -56,7 +56,7 @@ export class ReleaseNotesModal extends Modal {
 		const markdown = this.options.message ?? this.buildMarkdown();
 		await MarkdownRenderer.render(this.app, markdown, this.contentEl, '', this.renderHost);
 
-		const footer = this.contentEl.createEl('p', { cls: 'obplugin-release-notes-footer' });
+		const footer = this.contentEl.createEl('p', { cls: 'name-guard-release-notes-footer' });
 		const close = footer.createEl('button', { text: 'Close' });
 		close.addEventListener('click', () => this.close());
 	}

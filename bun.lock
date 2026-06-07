@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "obplugin",
+      "name": "name-guard",
       "dependencies": {
         "obsidian": "1.13.0",
       },
