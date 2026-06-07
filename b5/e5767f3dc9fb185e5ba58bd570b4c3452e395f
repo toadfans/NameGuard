@@ -1,0 +1,14 @@
+package.json
+  h_6b23b0021492af 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.3",
+  "base_commit_sha": "b5e5767f3dc9fb185e5ba58bd570b4c3452e395f",
+  "prompts": {},
+  "humans": {
+    "h_6b23b0021492af": {
+      "author": "Yuhang Shi <toadfanszz@gmail.com>"
+    }
+  }
+}
