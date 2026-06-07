@@ -1,0 +1,49 @@
+README.md
+  s_44bdf26e41ca9e::t_66ca738e9ce2de 51-52
+  s_44bdf26e41ca9e::t_37fa607cc17885 73-74
+src/settings-data.ts
+  s_44bdf26e41ca9e::t_f6e5eccee92c1c 1-22
+CHANGELOG.md
+  h_6b23b0021492af 3
+package.json
+  h_6b23b0021492af 3
+docs/settings.md
+  s_44bdf26e41ca9e::t_348ddb5c1bd47c 9-15,20,22,24-26,28,30-32
+src/name-guard.ts
+  s_44bdf26e41ca9e::t_4d56f469d569fa 26-27,37-40,66
+docs/faq.md
+  s_44bdf26e41ca9e::t_53bc6ccad22fd6 14,30,35-36,45-46,60
+  s_44bdf26e41ca9e::t_66ca738e9ce2de 50-52
+scripts/settings-definition.test.mjs
+  s_44bdf26e41ca9e::t_13bfcafab26817 3,18-27,32-35
+  s_44bdf26e41ca9e::t_fb2e1bf8eb77a8 8,13
+  s_44bdf26e41ca9e::t_d38fe08fce6f9e 15-17,28-30
+  s_44bdf26e41ca9e::t_431e2145ce52d6 31
+src/settings.ts
+  s_44bdf26e41ca9e::t_f6e5eccee92c1c 3
+src/main.ts
+  s_44bdf26e41ca9e::t_f6e5eccee92c1c 5-6,47
+docs/getting-started.md
+  s_44bdf26e41ca9e::t_eea10595449db8 49
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.3",
+  "base_commit_sha": "9de5d4e9cad05dd809f8e0a88e449b8c5128ead3",
+  "prompts": {},
+  "humans": {
+    "h_6b23b0021492af": {
+      "author": "Yuhang Shi <toadfanszz@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_44bdf26e41ca9e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ea31b-b8f6-77c1-98c0-e8337d543e23",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Yuhang Shi <toadfanszz@gmail.com>"
+    }
+  }
+}
