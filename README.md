@@ -48,8 +48,8 @@ duplicate name, NameGuard blocks it **before the file is created** — so the re
 
 Obsidian's `MetadataCache.fileToLinktext` falls back to a full path once a name stops being unique,
 and `FileManager` rewrites the affected links right after a create/rename. NameGuard wraps the vault's
-`create` / `createBinary` / `rename` (and optionally `copy`) and rejects the operation when the new
-name already resolves to an existing note — so the trigger never fires.
+`create` / `createBinary` / `rename` and rejects the operation when the new name already resolves to
+an existing note — so the trigger never fires.
 
 📖 Full write-up in **[docs/how-it-works.md](docs/how-it-works.md)**.
 
@@ -70,8 +70,8 @@ bun run build      # bundles main.js
 
 ## Settings
 
-Every guard is a toggle under **Settings → NameGuard**. Defaults work out of the box; see the
-**[settings reference](docs/settings.md)** for what each one does.
+NameGuard works with its defaults. **Settings → NameGuard** exposes only file-type scope and release
+note preferences; see the **[settings reference](docs/settings.md)** for details.
 
 ## Documentation
 

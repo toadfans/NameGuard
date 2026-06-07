@@ -2,7 +2,8 @@ import { Plugin } from 'obsidian';
 import { isVersionNewerThanOther } from './changelog';
 import { installNameGuard } from './name-guard';
 import { ReleaseNotesModal } from './release-notes-modal';
-import { DEFAULT_SETTINGS, NameGuardPluginSettings, NameGuardSettingTab } from './settings';
+import { NameGuardSettingTab } from './settings';
+import { loadNameGuardSettings, type NameGuardPluginSettings } from './settings-data';
 
 export default class NameGuardPlugin extends Plugin {
 	settings!: NameGuardPluginSettings;
@@ -43,9 +44,7 @@ export default class NameGuardPlugin extends Plugin {
 	onunload() {}
 
 	async loadSettings() {
-		this.settings = Object.assign(
-			{},
-			DEFAULT_SETTINGS,
+		this.settings = loadNameGuardSettings(
 			(await this.loadData()) as Partial<NameGuardPluginSettings>,
 		);
 	}

@@ -23,8 +23,8 @@ export function installNameGuard(plugin: NameGuardPlugin): void {
 	const context = (): GuardContext => {
 		const linkFormat = (vault as VaultWithConfig).getConfig?.('newLinkFormat');
 		return {
-			enabled: plugin.settings.enabled,
-			onlyInShortestMode: plugin.settings.onlyInShortestMode,
+			enabled: true,
+			onlyInShortestMode: true,
 			markdownOnly: plugin.settings.markdownOnly,
 			linkFormat: typeof linkFormat === 'string' ? linkFormat : '',
 			basenameExists: (basename) => basenameExists(plugin, basename),
@@ -34,12 +34,10 @@ export function installNameGuard(plugin: NameGuardPlugin): void {
 	const blocked = (decision: GuardDecision, verb: string): Error => {
 		const existing = plugin.app.metadataCache.getFirstLinkpathDest(decision.basename, '');
 		const location = existing ? ` at "${existing.path}"` : '';
-		if (plugin.settings.showNotice) {
-			const notice = new Notice(
-				`NameGuard: a note named "${decision.basename}" already exists${location}. ${capitalize(verb)} blocked.`,
-			);
-			notice.messageEl.addClass('name-guard-blocked-notice');
-		}
+		const notice = new Notice(
+			`NameGuard: a note named "${decision.basename}" already exists${location}. ${capitalize(verb)} blocked.`,
+		);
+		notice.messageEl.addClass('name-guard-blocked-notice');
 		return new Error(`NameGuard blocked ${verb}: duplicate name "${decision.basename}"`);
 	};
 
@@ -65,7 +63,7 @@ export function installNameGuard(plugin: NameGuardPlugin): void {
 
 	const originalRename = vault.rename.bind(vault);
 	vault.rename = (file: TAbstractFile, newPath: string) => {
-		if (plugin.settings.guardRename && file instanceof TFile) {
+		if (file instanceof TFile) {
 			const decision = shouldBlockRename(file.basename, newPath, context());
 			if (decision.block) return Promise.reject(blocked(decision, 'rename'));
 		}
@@ -73,18 +71,6 @@ export function installNameGuard(plugin: NameGuardPlugin): void {
 	};
 	plugin.register(() => {
 		vault.rename = originalRename;
-	});
-
-	const originalCopy = vault.copy.bind(vault);
-	vault.copy = ((file: TAbstractFile, newPath: string) => {
-		if (plugin.settings.guardCopy) {
-			const decision = shouldBlockCreate(newPath, context());
-			if (decision.block) return Promise.reject(blocked(decision, 'copy'));
-		}
-		return originalCopy(file, newPath);
-	}) as typeof vault.copy;
-	plugin.register(() => {
-		vault.copy = originalCopy;
 	});
 }
 

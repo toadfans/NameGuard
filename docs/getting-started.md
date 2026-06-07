@@ -46,7 +46,7 @@ only guards **new** collisions.
 
 NameGuard works immediately with its defaults — there is nothing to configure. When it blocks an
 operation, you'll see a short notice telling you which existing note caused the conflict. Rename your
-new note to something unique, or adjust the guards in **Settings → NameGuard**.
+new note to something unique, or temporarily disable the plugin under **Settings → Community plugins**.
 
 ## Quick try-out
 

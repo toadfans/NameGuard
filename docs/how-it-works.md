@@ -44,7 +44,6 @@ wraps the vault methods that all file creation and movement funnel through:
   and most programmatic creation.
 - `Vault.rename` — used by moving and renaming, including `FileManager.renameFile`, which calls
   `Vault.rename` internally.
-- `Vault.copy` — optional, off by default.
 
 Before delegating to the original method, each wrapper asks a small, pure decision function whether
 the operation would introduce a duplicate name. If it would, the wrapper returns a rejected promise

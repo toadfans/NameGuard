@@ -11,8 +11,7 @@ sidebar:
 Because that is the only mode where the problem exists. In **Shortest path when possible** mode,
 Obsidian rewrites your existing links the moment a duplicate name appears. In **relative** and
 **absolute** modes, links already carry a path and adding another same-named note does not change how
-they resolve, so there is nothing to protect against. If you still want strict unique names in those
-modes, turn off **Only in shortest link mode** in settings.
+they resolve, so there is nothing to protect against.
 
 ### Does NameGuard change or delete my existing duplicates?
 
@@ -28,13 +27,13 @@ duplicate name, so it is blocked. This is the strict behavior working as intende
 - Give the new note a unique name.
 - Keep notes that share a working name (like `Untitled`) in the same folder, where Obsidian's own
   auto-numbering produces `Untitled 1`, `Untitled 2`, and so on.
-- Temporarily turn off the master switch in **Settings → NameGuard**.
+- Temporarily disable **NameGuard** under **Settings → Community plugins**.
 
 ### What about files created by Sync, an external editor, or the file system?
 
 NameGuard can only guard operations that go through Obsidian's vault API (`create`, `createBinary`,
-`rename`, and optionally `copy`). Files that arrive from a sync client, an external editor, or directly
-on disk are picked up by Obsidian's file watcher instead, so NameGuard does not intercept them.
+and `rename`). Files that arrive from a sync client, an external editor, or directly on disk are
+picked up by Obsidian's file watcher instead, so NameGuard does not intercept them.
 
 ### Does it guard attachments and other non-markdown files?
 
@@ -43,15 +42,14 @@ off **Markdown notes only** to enforce unique names across every file type.
 
 ### What happens when an operation is blocked?
 
-The create, rename, or copy is aborted (it returns a rejected promise), and — unless you turned off
-notices — a short notification names the existing note that caused the conflict. Nothing is written to
-disk and no links are rewritten.
+The create or rename is aborted (it returns a rejected promise), and a short notification names the
+existing note that caused the conflict. Nothing is written to disk and no links are rewritten.
 
 ### Is there any performance cost?
 
-Negligible. The check runs only when you create, move, rename, or copy a file, and it reuses
-Obsidian's own link resolver for the markdown fast path. There is no background scanning and no work
-during normal editing.
+Negligible. The check runs only when you create, move, or rename a file, and it reuses Obsidian's own
+link resolver for the markdown fast path. There is no background scanning and no work during normal
+editing.
 
 ### Does NameGuard make any network requests or collect data?
 
@@ -59,5 +57,4 @@ No. It runs entirely locally, makes no network requests, and collects no telemet
 
 ### How do I turn it off temporarily?
 
-Toggle **Enable NameGuard** off in **Settings → NameGuard**. It takes effect immediately, and you can
-turn it back on the same way.
+Disable **NameGuard** under **Settings → Community plugins**. Enable it again from the same screen.
