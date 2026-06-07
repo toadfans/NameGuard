@@ -1,7 +1,7 @@
 {
 	"id": "name-guard",
 	"name": "NameGuard",
-	"version": "0.0.200",
+	"version": "0.0.3",
 	"minAppVersion": "1.8.7",
 	"description": "Strictly enforce vault-wide unique note names. Blocks new notes (and moves/renames) that would collide with an existing name, so shortest-format links are never silently rewritten.",
 	"author": "toadfans",
