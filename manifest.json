@@ -5,6 +5,6 @@
 	"minAppVersion": "1.8.7",
 	"description": "Strictly enforce vault-wide unique note names. Blocks new notes (and moves/renames) that would collide with an existing name, so shortest-format links are never silently rewritten.",
 	"author": "toadfans",
-	"authorUrl": "https://github.com/toadfans/NameGuard",
+	"authorUrl": "https://github.com/toadfans",
 	"isDesktopOnly": false
 }
