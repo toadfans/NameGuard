@@ -44,7 +44,7 @@ jobs:
     if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref_name == 'main')
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
     steps:
       - name: Checkout source
         uses: actions/checkout@v6
@@ -63,6 +63,7 @@ jobs:
           output: dist/docs
           base: /name-guard/
           publish: true
+          token: ${{ github.token }}
 
       - name: Upload docs artifact
         uses: actions/upload-artifact@v7
