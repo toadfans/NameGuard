@@ -1,0 +1,19 @@
+manifest.json
+  s_40530cc57b9cd3::t_33261d6346ad5b 8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.3",
+  "base_commit_sha": "e3c82891cfe9e3103c9c88be18efde992f1216b6",
+  "prompts": {},
+  "sessions": {
+    "s_40530cc57b9cd3": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ea339-6fe1-7c90-a30a-fe71ed862d53",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Yuhang Shi <toadfanszz@gmail.com>"
+    }
+  }
+}
