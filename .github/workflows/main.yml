@@ -61,7 +61,7 @@ jobs:
         uses: ./.starflow-action
         with:
           output: dist/docs
-          base: /name-guard/
+          base: /${{ github.event.repository.name }}/
           publish: true
           token: ${{ github.token }}
 
