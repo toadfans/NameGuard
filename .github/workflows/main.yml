@@ -5,6 +5,7 @@ on:
     branches: ['**']
   pull_request:
     branches: ['**']
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
@@ -40,7 +41,7 @@ jobs:
   docs:
     name: Docs
     needs: ci
-    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref_name == 'main')
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -53,7 +54,6 @@ jobs:
         with:
           repository: toadfans/starflow
           ref: main
-          token: ${{ secrets.STARFLOW_TOKEN }}
           path: .starflow-action
 
       - name: Build docs
@@ -71,7 +71,7 @@ jobs:
   release:
     name: Release
     needs: docs
-    if: github.event_name == 'push' && github.ref_name == 'main'
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref_name == 'main')
     runs-on: ubuntu-latest
     permissions:
       attestations: write
