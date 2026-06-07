@@ -1,0 +1,19 @@
+knip.json
+  s_f90dbcbade995f::t_79eccfe559397c 4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.3",
+  "base_commit_sha": "078fd5beca9487226c868fb69caa841916a85d2c",
+  "prompts": {},
+  "sessions": {
+    "s_f90dbcbade995f": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ea326-e829-7440-ae3c-37a27ae786dc",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Yuhang Shi <toadfanszz@gmail.com>"
+    }
+  }
+}
