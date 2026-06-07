@@ -55,6 +55,7 @@ jobs:
           repository: toadfans/starflow
           ref: main
           path: .starflow-action
+          token: ${{ secrets.TOADFANS_PAT }}
 
       - name: Build docs
         uses: ./.starflow-action
