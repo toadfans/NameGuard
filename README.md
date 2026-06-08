@@ -7,7 +7,7 @@
 [![Main](https://github.com/toadfans/NameGuard/actions/workflows/main.yml/badge.svg)](https://github.com/toadfans/NameGuard/actions/workflows/main.yml)
 [![Obsidian plugin](./assets/plugin.svg)](https://community.obsidian.md/plugins/name-guard)
 [![Obsidian minimal version](./assets/min-version.svg)](https://community.obsidian.md/plugins/name-guard)
-![License](https://img.shields.io/badge/license-MIT-blue)
+![License](./assets/license.svg)
 
 </div>
 
