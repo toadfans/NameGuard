@@ -1,0 +1,24 @@
+README.md
+  s_3ce50c457d9a94::t_c431148b7d33f2 8-9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.3",
+  "base_commit_sha": "6106cf2b59eddcad76942d75c1090922c125d45d",
+  "prompts": {},
+  "humans": {
+    "h_6b23b0021492af": {
+      "author": "Yuhang Shi <toadfanszz@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_3ce50c457d9a94": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ea571-28ba-7fb0-b3ee-316eb4d93437",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Yuhang Shi <toadfanszz@gmail.com>"
+    }
+  }
+}
