@@ -1,0 +1,34 @@
+scripts/version-bump.test.ts
+  s_3e625e02808ef7::t_9c50548dc718ea 9,21
+.husky/pre-commit
+  h_6b23b0021492af 1
+knip.json
+  s_3e625e02808ef7::t_9c50548dc718ea 3,5
+package.json
+  s_3e625e02808ef7::t_9c50548dc718ea 9-13
+AGENTS.md
+  s_3e625e02808ef7::t_9c50548dc718ea 14
+eslint.config.mts
+  s_3e625e02808ef7::t_9c50548dc718ea 6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.3",
+  "base_commit_sha": "16ffeab46aac3c22acc2d7938e29808878bac80b",
+  "prompts": {},
+  "humans": {
+    "h_6b23b0021492af": {
+      "author": "Yuhang Shi <toadfanszz@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_3e625e02808ef7": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ea51f-5555-7ec0-91d8-817dcf085516",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Yuhang Shi <toadfanszz@gmail.com>"
+    }
+  }
+}
