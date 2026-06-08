@@ -1,7 +1,7 @@
-node scripts/version-bump.mjs
+bun scripts/version-bump.ts
 git add manifest.json versions.json
 
-version=$(git show :package.json | node -e "let s=''; process.stdin.on('data', d => s += d); process.stdin.on('end', () => console.log(JSON.parse(s).version))")
+version=$(git show :package.json | bun -e "let s=''; process.stdin.on('data', d => s += d); process.stdin.on('end', () => console.log(JSON.parse(s).version))")
 has_notes=$(git show :CHANGELOG.md | awk -v ver="$version" '
   /^## \[/ { if ($0 ~ ("## \\[" ver "\\]")) found=1 }
   END { print found ? "1" : "0" }
@@ -34,7 +34,6 @@ files=$(git diff --cached --name-only --diff-filter=ACMR -- \
   '*.js' \
   '*.json' \
   '*.md' \
-  '*.mjs' \
   '*.mts' \
   '*.ts' \
   '*.yaml' \

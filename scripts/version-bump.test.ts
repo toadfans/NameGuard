@@ -6,7 +6,7 @@ import { test, expect } from 'vitest';
 
 test('syncs manifest and versions to package version', () => {
 	const dir = mkdtempSync(join(tmpdir(), 'version-bump-'));
-	const script = resolve('scripts/version-bump.mjs');
+	const script = resolve('scripts/version-bump.ts');
 
 	writeFileSync(
 		join(dir, 'package.json'),
@@ -18,7 +18,7 @@ test('syncs manifest and versions to package version', () => {
 	);
 	writeFileSync(join(dir, 'versions.json'), JSON.stringify({ '1.0.0': '0.15.0' }, null, '\t'));
 
-	const result = spawnSync(process.execPath, [script], {
+	const result = spawnSync('bun', [script], {
 		cwd: dir,
 		env: process.env,
 		encoding: 'utf8',

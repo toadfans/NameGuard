@@ -11,7 +11,7 @@
 - Node.js: use current LTS (Node 18+ recommended).
 - Bun: use the version pinned in `package.json`'s `packageManager` field.
 - **Package manager: Bun** (required for this project - `package.json` defines Bun scripts and dependencies).
-- **Bundler: esbuild** (required for this sample - `esbuild.config.mjs` and build scripts depend on it). Alternative bundlers like Rollup or webpack are acceptable for other projects if they bundle all external dependencies into `main.js`.
+- **Bundler: esbuild** (required for this sample - `esbuild.config.ts` and build scripts depend on it). Alternative bundlers like Rollup or webpack are acceptable for other projects if they bundle all external dependencies into `main.js`.
 - Dependency updates: Renovate is configured in `renovate.json`.
 - Types: `obsidian` type definitions.
 

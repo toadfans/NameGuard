@@ -3,7 +3,7 @@ import obsidianmd from 'eslint-plugin-obsidianmd';
 import { parser as tsparser } from 'typescript-eslint';
 
 export default defineConfig([
-	globalIgnores(['node_modules', 'main.js', 'esbuild.config.mjs', 'scripts', '*.json']),
+	globalIgnores(['node_modules', 'main.js', 'esbuild.config.ts', 'scripts', '*.json']),
 	...obsidianmd.configs.recommended,
 	{
 		files: ['**/*.ts'],
