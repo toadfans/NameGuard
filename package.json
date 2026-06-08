@@ -1,6 +1,6 @@
 {
 	"name": "name-guard",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"description": "This is the NameGuard plugin for Obsidian (https://obsidian.md)",
 	"main": "main.js",
 	"type": "module",
