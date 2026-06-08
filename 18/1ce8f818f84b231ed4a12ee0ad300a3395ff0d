@@ -1,0 +1,19 @@
+scripts/sync-obsidian-local.mjs
+  s_b563ae86449ce3::t_3554bf6b63175f 3,13-29,50-51
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.3",
+  "base_commit_sha": "181ce8f818f84b231ed4a12ee0ad300a3395ff0d",
+  "prompts": {},
+  "sessions": {
+    "s_b563ae86449ce3": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ea33e-a8a7-7ea1-b54c-7b6d6484d9dc",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Yuhang Shi <toadfanszz@gmail.com>"
+    }
+  }
+}
