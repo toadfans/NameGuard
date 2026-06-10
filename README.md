@@ -4,10 +4,7 @@
 
 ### Keep every note name unique — and stop Obsidian from silently rewriting your links.
 
-[![Main](https://github.com/toadfans/NameGuard/actions/workflows/main.yml/badge.svg)](https://github.com/toadfans/NameGuard/actions/workflows/main.yml)
-[![Obsidian plugin](./assets/plugin.svg)](https://community.obsidian.md/plugins/name-guard)
-[![Obsidian minimal version](./assets/min-version.svg)](https://community.obsidian.md/plugins/name-guard)
-![License](./assets/license.svg)
+[![Main](https://github.com/toadfans/NameGuard/actions/workflows/main.yml/badge.svg)](https://github.com/toadfans/NameGuard/actions/workflows/main.yml) [![Obsidian plugin](./assets/plugin.svg)](https://community.obsidian.md/plugins/name-guard) [![Obsidian minimal version](./assets/min-version.svg)](https://community.obsidian.md/plugins/name-guard) ![License](./assets/license.svg)
 
 </div>
 
