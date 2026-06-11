@@ -1,0 +1,16 @@
+.github/workflows/badges.yml
+  h_6b23b0021492af 6
+README.md
+  h_6b23b0021492af 7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "2b79b4604c0bd87c877f44c8aed0fff21c81d6ea",
+  "prompts": {},
+  "humans": {
+    "h_6b23b0021492af": {
+      "author": "Yuhang Shi <toadfanszz@gmail.com>"
+    }
+  }
+}
