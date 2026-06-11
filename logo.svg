@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+	<title id="title">NameGuard</title>
+	<rect width="256" height="256" rx="48" fill="#111827"/>
+	<path d="M128 28l76 28v58c0 48-30 91-76 114-46-23-76-66-76-114V56l76-28z" fill="#f9fafb"/>
+	<path d="M128 48l56 21v45c0 35-21 67-56 86-35-19-56-51-56-86V69l56-21z" fill="#111827"/>
+	<path d="M94 91h68v20h-47v20h39v20h-39v38H94V91z" fill="#f9fafb"/>
+</svg>
